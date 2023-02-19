@@ -1,0 +1,5 @@
+Today's iPhones Pro Maxes:
+
+{% for product in products -%}
+- {{ "€{:,.0f}".format(product.price) }} for {{ product.name }}
+{% endfor %}
