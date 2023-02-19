@@ -1,0 +1,4 @@
+jinja-cli==1.2.2
+refurbished==0.11.0
+telegram-cli==0.2.0
+toggl-track==0.3.0
