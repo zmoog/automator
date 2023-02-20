@@ -8,14 +8,14 @@ set -e
 
 AUTOMATION=$1
 
-[ ! -f $AUTOMATION ] && echo "Automation $AUTOMATION does not exist" && exit 1
-
 pushd ${AUTOMATOR_HOME}
+
+[ ! -f ${AUTOMATION} ] && echo "Automation ${AUTOMATION} does not exist" && exit 1
 
 . venv/bin/activate
 
-echo "Running $AUTOMATION"
+echo "Running ${AUTOMATION}"
 
-. $AUTOMATION
+. ${AUTOMATION}
 
 popd
