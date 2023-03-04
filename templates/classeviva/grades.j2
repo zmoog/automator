@@ -1,0 +1,10 @@
+## Classeviva
+
+Ultimi 10 voti (in ordine cronologico):
+
+{% for date, items in grades|groupby("evtDate") -%}
+{{ date }}:
+{% for grade in items -%}
+- {{ grade.displayValue }}{% if grade.color == "blue" %} (blu){% endif %} {{ grade.subjectDesc }}{% if grade.notesForFamily %} — {{ grade.notesForFamily }}{% endif %}
+{% endfor %}
+{% endfor %}
