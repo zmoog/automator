@@ -4,6 +4,9 @@ set -e
 
 [ -z ${AUTOMATOR_HOME} ] && echo "AUTOMATOR_HOME is not set" && exit 1
 
+# Add non-Python tools to the PATH.
+export PATH=$PATH/tools
+
 [ $# -eq 0 ] && echo "No arguments provided" && exit 1
 
 AUTOMATION=$1
